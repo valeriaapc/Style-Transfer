@@ -36,7 +36,6 @@ Optimización basada en el método de descenso de gradiente, utilizando el optim
 ## Criterios de Parada y Parámetros a Ajustar
 Criterio de detención: Reducción estable en el MSE durante el entrenamiento.
 ### Parámetros:
-Número de bloques de VGG16 a utilizar ( 3 bloques????).\
 Dimensiones y filtros de cada capa en el decodificador.\
 Valor de aprendizaje del optimizador Adam.
 
@@ -57,7 +56,8 @@ Matriz de Gram para evaluar la fidelidad del estilo transferido.\
 - Simulaciones: 10-15 simulaciones para ajustar parámetros y evaluar métricas de desempeño.
 
 ## Cronograma de Actividades (Carta GANTT)
-(((Falta pegar la imagen ya la hice )))
+![Gráfico diagrama  carta gantt para actividades o proyectos color pastel imprimible](https://github.com/user-attachments/assets/6d33059c-05a5-4752-a98f-b0c271fad2fd)
+
 
 ## Referencias
 Gatys, L. A., Ecker, A. S., & Bethge, M. (2016). "Image Style Transfer Using Convolutional Neural Networks". IEEE Transactions on Neural Networks and Learning Systems.
