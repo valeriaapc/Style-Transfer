@@ -13,7 +13,8 @@ La transferencia de estilo de imágenes consiste en transformar una imagen de co
 - Diseñar métricas cuantitativas para evaluar objetivamente la calidad de la transferencia de estilo.
   
 ## Base de Datos
-Para el entrenamiento se utilizará la base de datos COCO Train 2017, debido a su amplia variedad de imágenes realistas. Es necesario un preprocesamiento que asegure la uniformidad en las dimensiones y el formato de las imágenes antes de ingresarlas a la red VGG16.
+Para el entrenamiento se utilizará la base de datos COCO Train 2017, debido a su amplia variedad de imágenes realistas. Es necesario un preprocesamiento que asegure la uniformidad en las dimensiones y el formato de las imágenes antes de ingresarlas a la red VGG16.\
+El enlace a la base de datos utilizada se presenta acontinuación: https://cocodataset.org/#download
 
 ## Pre-procesamiento de Datos
 El preprocesamiento incluye:
@@ -34,10 +35,11 @@ Imagen generada que mantenga la estructura de la imagen de contenido y aplique l
 Optimización basada en el método de descenso de gradiente, utilizando el optimizador Adam. Además el uso del error cuadrático medio (MSE) para minimizar la diferencia entre las imágenes reconstruidas y las de referencia.
 
 ## Criterios de Parada y Parámetros a Ajustar
-Criterio de detención: Reducción estable en el MSE durante el entrenamiento.
+Criterio de detención: Pendiente positiva en la curva de validación de Loss.
 ### Parámetros:
 Dimensiones y filtros de cada capa en el decodificador.\
-Valor de aprendizaje del optimizador Adam.
+Número de imágenes a usar en el entrenamiento.\
+Número de épocas de entrenamiento.
 
 ## Software y Lenguaje de Programación
 Software principal: Python, con uso de bibliotecas como PyTorch para la implementación de las redes neuronales.
@@ -51,9 +53,9 @@ Frechet Inception Distance (FID) para la calidad de la transferencia.\
 Matriz de Gram para evaluar la fidelidad del estilo transferido.\
 
 ## Recursos computacionales:
-- GPU para entrenar las redes CNN y procesar el WCT.
-- Tiempo estimado: Cada simulación de entrenamiento completo toma horas.
-- Simulaciones: 10-15 simulaciones para ajustar parámetros y evaluar métricas de desempeño.
+- GPU de 5.5 GB para entrenar las redes CNN.
+- Tiempo estimado: Cada simulación de entrenamiento completo toma aproximadamente una hora.
+- Simulaciones: 5 simulaciones para ajustar parámetros y evaluar métricas de desempeño.
 
 ## Cronograma de Actividades (Carta GANTT)
 ![Gráfico diagrama  carta gantt para actividades o proyectos color pastel imprimible](https://github.com/user-attachments/assets/6d33059c-05a5-4752-a98f-b0c271fad2fd)
@@ -64,5 +66,7 @@ Gatys, L. A., Ecker, A. S., & Bethge, M. (2016). "Image Style Transfer Using Con
 Li, Y., Fang, C., Yang, J., et al. (2017). "Universal Style Transfer via Feature Transforms". Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.
 
 ## Resultados Preliminares
-Se ha completado la fase de entrenamiento del autoencoder con una capacidad aceptable de reconstrucción de imágenes. Los primeros experimentos muestran que el modelo preserva los elementos visuales clave del contenido. Los próximos pasos incluirán la implementación completa de la técnica WCT y la evaluación de las métricas propuestas.
+Se ha completado la fase de entrenamiento del autoencoder con una buena capacidad de reconstrucción de imágenes. Los primeros experimentos muestran que el modelo preserva los elementos visuales clave del contenido. Los próximos pasos incluirán la implementación completa de la técnica WCT y la evaluación de las métricas propuestas.\
+
+![resultado gato](https://github.com/user-attachments/assets/f9f15b99-1b8c-4287-98d5-d98f50849bff)
 
