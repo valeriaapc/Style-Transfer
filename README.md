@@ -47,10 +47,10 @@ Software principal: Python, con uso de bibliotecas como PyTorch para la implemen
 ### Resultados esperados: 
 Generación de imágenes que mantengan el contenido con el estilo aplicado.
 ### Propuesta de medidas de desempeño:
-Histograma de colores para evaluar la similitud de color.\
-Frechet Inception Distance (FID) para la calidad de la transferencia.\
-Matriz de Gram para evaluar la fidelidad del estilo transferido.
-
+- Matriz de Gram  y LPIPS (Learned Perceptual Image Patch Similarity) para evaluar la fidelidad del estilo transferido.\
+- Perceptual Loss y SSIM (Structural Similarity Index) para evaluar la fidelidad con la imagen de contenido.\
+- Tradeoff Content-Style para evaluar el equilibrio entre contenido y estilo a partir de valor ajustable. 
+ 
 ## Recursos computacionales:
 - GPU de 5.5 GB para entrenar las redes CNN.
 - Tiempo estimado: Cada simulación de entrenamiento completo toma aproximadamente una hora y media.
@@ -59,15 +59,59 @@ Matriz de Gram para evaluar la fidelidad del estilo transferido.
 ## Cronograma de Actividades (Carta GANTT)
 ![Gráfico diagrama  carta gantt para actividades o proyectos color pastel imprimible](https://github.com/user-attachments/assets/6d33059c-05a5-4752-a98f-b0c271fad2fd)
 
+## Resultados
+
+### Reconstrucción de imágenes por bloque.
+
+Se ha completó la fase de entrenamiento del autoencoder con una buena capacidad de reconstrucción de imágenes. Los experimentos muestran que el modelo preserva los elementos visuales clave del contenido. 
+
+![Captura de pantalla 2024-12-08 132602](https://github.com/user-attachments/assets/6454e187-423d-4b80-9b58-c4a56a3194a1)
+
+![Captura de pantalla 2024-12-08 132624](https://github.com/user-attachments/assets/26e04b01-5e0b-4e4f-9bc6-3fe0f1bbc60f)
+
+![Captura de pantalla 2024-12-08 132653](https://github.com/user-attachments/assets/d911004e-3534-4209-aaac-35527cd7c67e)
+
+
+### Resultados de tranferencia
+
+![Captura de pantalla 2024-12-08 132931](https://github.com/user-attachments/assets/1c7fa60e-3c45-4ac4-aca3-049c7f741370)
+
+![Captura de pantalla 2024-12-08 132909](https://github.com/user-attachments/assets/a18a035a-f09d-4c4d-8c44-adc657f6343e)
+
+![Captura de pantalla 2024-12-08 132853](https://github.com/user-attachments/assets/6e76f1e9-c453-49b1-ad85-cc98c15dfe0d)
+
+
+### Resultados evaluación métricas.
+
+A partir del resultado obtenido:
+![descarga](https://github.com/user-attachments/assets/54035c88-634d-444b-96a9-1259fc3335dc)
+
+Se obtienen la siguiente evaluación:
+
+![Captura de pantalla 2024-12-08 130951](https://github.com/user-attachments/assets/94c93939-2405-46c4-8562-54b15ff1beb0)
+
+SSIM: 0.311. \
+LPIPS: 0.729.
+
+#### Comparando con resultados esperados del paper:
+
+![descarga (1)](https://github.com/user-attachments/assets/561076a2-6afd-4371-9bef-e5f975c95461)
+
+Se obtienen la siguiente evaluación:
+
+![Captura de pantalla 2024-12-08 131728](https://github.com/user-attachments/assets/02bc6358-53b9-4c65-8a42-ef1a6e5d8fce)
+
+SSIM: 0.2191. \
+LPIPS: 0.7354.
+
+Se puede observar que ambos resultados presentan una evaluación con medidas similares, por lo que se puede concluir que los resultados son competitivos y concuerdan con lo esperado. 
 
 ## Referencias
 - Li, Y., Fang, C., Yang, J., Wang, Z., Lu, X., & Yang, M. H. (2017). Universal style transfer via feature transforms. In Advances in neural information processing systems (pp. 386-396). https://arxiv.org/abs/1705.08086 
 - T.-Y. Lin et al., “Microsoft Coco: Common Objects in Context,” Lecture Notes in Computer Science, pp. 740–755, 2014. doi:10.1007/978-3-319-10602-1_48 
 - Simonyan, K., & Zisserman, A. (2014). Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556 
 - Gatys, L. A., Ecker, A. S., & Bethge, M. (2016). "Image Style Transfer Using Convolutional Neural Networks". IEEE Transactions on Neural Networks and Learning Systems.
+- “Structural similarity index — skimage 0.24.0 documentation”. scikit-image: Image processing in Python — scikit-image. [En línea]. Disponible: https://scikit-image.org/docs/0.24.x/auto_examples/transform/plot_ssim.html
+- “Learned Perceptual Image Patch Similarity (LPIPS) — PyTorch-Metrics 1.5.2 documentation”. Lightning AI. [En línea]. Disponible: https://lightning.ai/docs/torchmetrics/stable/image/learned_perceptual_image_patch_similarity.html
 
-## Resultados Preliminares
-Se ha completado la fase de entrenamiento del autoencoder con una buena capacidad de reconstrucción de imágenes. Los primeros experimentos muestran que el modelo preserva los elementos visuales clave del contenido. Los próximos pasos incluirán la implementación completa de la técnica WCT y la evaluación de las métricas propuestas.
-
-![resultado gato](https://github.com/user-attachments/assets/f9f15b99-1b8c-4287-98d5-d98f50849bff)
 
