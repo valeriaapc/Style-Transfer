@@ -108,11 +108,12 @@ LPIPS: 0.7354.
 Se puede observar que ambos resultados presentan una evaluación con medidas similares, por lo que se puede concluir que los resultados son competitivos y concuerdan con lo esperado. 
 
 ## Referencias
-- Li, Y., Fang, C., Yang, J., Wang, Z., Lu, X., & Yang, M. H. (2017). Universal style transfer via feature transforms. In Advances in neural information processing systems (pp. 386-396). https://arxiv.org/abs/1705.08086 
-- T.-Y. Lin et al., “Microsoft Coco: Common Objects in Context,” Lecture Notes in Computer Science, pp. 740–755, 2014. doi:10.1007/978-3-319-10602-1_48 
-- Simonyan, K., & Zisserman, A. (2014). Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556 
+- Li, Y., Fang, C., Yang, J., Wang, Z., Lu, X., & Yang, M. H. (2017). Universal style transfer via feature transforms. In Advances in neural information processing systems (pp. 386-396). https://arxiv.org/abs/1705.08086.
+- T.-Y. Lin et al., “Microsoft Coco: Common Objects in Context,” Lecture Notes in Computer Science, pp. 740–755, 2014. doi:10.1007/978-3-319-10602-1_48.
+- Simonyan, K., & Zisserman, A. (2014). Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556.
 - Gatys, L. A., Ecker, A. S., & Bethge, M. (2016). "Image Style Transfer Using Convolutional Neural Networks". IEEE Transactions on Neural Networks and Learning Systems.
-- “Structural similarity index — skimage 0.24.0 documentation”. scikit-image: Image processing in Python — scikit-image. [En línea]. Disponible: https://scikit-image.org/docs/0.24.x/auto_examples/transform/plot_ssim.html
-- “Learned Perceptual Image Patch Similarity (LPIPS) — PyTorch-Metrics 1.5.2 documentation”. Lightning AI. [En línea]. Disponible: https://lightning.ai/docs/torchmetrics/stable/image/learned_perceptual_image_patch_similarity.html
+- “Structural similarity index — skimage 0.24.0 documentation”. scikit-image: Image processing in Python — scikit-image. Disponible: https://scikit-image.org/docs/0.24.x/auto_examples/transform/plot_ssim.html.
+- “Learned Perceptual Image Patch Similarity (LPIPS) — PyTorch-Metrics 1.5.2 documentation”. Lightning AI. Disponible: https://lightning.ai/docs/torchmetrics/stable/image/learned_perceptual_image_patch_similarity.html.
+- S.-H. Tsang. “Brief Review — Perceptual Losses for Real-Time Style Transfer and Super-Resolution”. Medium. Disponible: https://sh-tsang.medium.com/brief-review-perceptual-losses-for-real-time-style-transfer-and-super-resolution-ac4fd2658b8.
 
 
