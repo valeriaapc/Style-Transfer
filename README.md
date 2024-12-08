@@ -63,7 +63,7 @@ Generación de imágenes que mantengan el contenido con el estilo aplicado.
 
 ### Reconstrucción de imágenes por bloque.
 
-Se ha completó la fase de entrenamiento del autoencoder con una buena capacidad de reconstrucción de imágenes. Los experimentos muestran que el modelo preserva los elementos visuales clave del contenido. 
+En esta etapa, se ha completado la fase de entrenamiento del autoencoder con una buena capacidad de reconstrucción de imágenes. Los experimentos muestran que el modelo preserva los elementos visuales clave del contenido. 
 
 ![Captura de pantalla 2024-12-08 132602](https://github.com/user-attachments/assets/6454e187-423d-4b80-9b58-c4a56a3194a1)
 
@@ -73,6 +73,7 @@ Se ha completó la fase de entrenamiento del autoencoder con una buena capacidad
 
 
 ### Resultados de tranferencia
+A partir de las imágenes reconstruidas y una imagen de estilo, se aplica la transferencia de estilo con WTC y se obtienen los siguientes resultados: 
 
 ![Captura de pantalla 2024-12-08 132931](https://github.com/user-attachments/assets/1c7fa60e-3c45-4ac4-aca3-049c7f741370)
 
